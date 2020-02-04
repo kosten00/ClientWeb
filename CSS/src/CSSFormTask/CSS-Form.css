@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #6C6866;
+}
+
+.header {
+    padding-left: 15px;
+    font-size: 32px;
+    margin-bottom: 2px;
+}
+
+form {
+    padding: 15px;
+    background-color: #FEEED6;
+    position: relative;
+}
+
+div {
+    padding-right: 23px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.text-filed {
+    margin-top: 5px;
+    width: 100%;
+    margin-right: 23px;
+}
+
+.text-filed[placeholder] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #999999;
+    padding: 8px;
+}
+
+.form-instruction {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #378DB2;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}

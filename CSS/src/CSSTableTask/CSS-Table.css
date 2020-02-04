@@ -1,0 +1,28 @@
+body {
+    font-family: Tahoma, sans-serif;
+    color: #676565;
+}
+
+table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #3498DB;
+    color: white;
+}
+
+tr {
+    border: 1px solid #CCCCCC;
+}
+
+td {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+}
+
+.even-row {
+    background: #EDEDED;
+}
