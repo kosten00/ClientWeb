@@ -1,28 +1,32 @@
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Tahoma, sans-serif;
     color: #676565;
+    font-size: 19px;
 }
 
-table {
-    border: 1px solid gray;
+.table-for-task {
+    margin: 10px;
+    border: 1px solid #CCCCCC;
     border-collapse: collapse;
-    width: 100%;
+    width: 760px;
 }
 
-thead {
-    background-color: #3498DB;
+.table-for-task thead {
+    background: #3498DB;
     color: white;
 }
 
-tr {
+.table-for-task th, td {
     border: 1px solid #CCCCCC;
+    text-align: left;
+    padding: 12px;
+    font-weight: normal;
 }
 
-td {
-    border: 1px solid #CCCCCC;
-    padding: 10px;
-}
-
-.even-row {
+.table-for-task tbody tr:nth-child(odd) {
     background: #EDEDED;
 }

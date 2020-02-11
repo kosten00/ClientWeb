@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS-Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="CSS-Form.css">
 </head>
 <body>
-<p class="header">Отправить заявку</p>
-<form>
-    <div>
-        <label>Ваше имя <br>
-            <input class="text-filed" type="text" placeholder="Ваше имя *" name="textField" required/>
-        </label>
-    </div>
-    <br>
-    <div>
-        <label>Ваш номер телефона<br>
-            <input class="text-filed" type="text" placeholder="Ваш номер телефона *" name="textField" required/>
-        </label>
-    </div>
-    <br>
-    <div>
-        <label>Ваш e-mail или VK <br>
-            <input class="text-filed" type="text" placeholder="Ваш e-mail или VK *" name="textField" required/>
-        </label>
-    </div>
-    <br>
-    <div>
-        <label>Комментарий<br>
-            <textarea class="text-filed comment-text-field" rows="5" placeholder="Комментарий *"
-                      name="textArea"></textarea>
-        </label>
-    </div>
-    <br>
-    <div>
-        <p class="form-instruction">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</p>
-    </div>
-    <br>
-    <button type="submit">Отправить заявку</button>
-</form>
+<div class="main-container">
+    <p class="header">Отправить заявку</p>
+    <form class="request-sending-form">
+        <div class="form-field">
+            <label class="form-field-label">Ваше имя <br>
+                <input class="text-filed" type="text" placeholder="Ваше имя *" name="name" required/>
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-field-label">Ваш номер телефона<br>
+                <input class="text-filed" type="text" placeholder="Ваш номер телефона *" name="phone" required/>
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-field-label">Ваш e-mail или VK <br>
+                <input class="text-filed" type="text" placeholder="Ваш e-mail или VK *" name="email" required/>
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-field-label">Комментарий<br>
+                <textarea class="text-filed comment-text-field" rows="6" placeholder="Комментарий"
+                          name="comment"></textarea>
+            </label>
+        </div>
+        <div class="form-field">
+            <p class="form-instruction">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</p>
+        </div>
+        <div class="button-field">
+            <button class="form-submit-button" type="submit">Отправить заявку</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: inline-block;
+    margin: 15px;
+}
+
+.header {
+    margin: 15px auto;
+    background-color: #FFD307;
+    border: 1px solid #849587;
+    max-width: 910px;
+}
+
+.container {
+
+}
+
+.header__menu {
+    font-family: Alef, sans-serif;
+    font-size: 24px;
+}
+
+.smaller-header-font {
+    font-size: 14px;
+}
+
+.rounded-border {
+    border-radius: 5px;
+}
