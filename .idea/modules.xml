@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/ClientWeb.iml" filepath="$PROJECT_DIR$/ClientWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/Gabriel/Gabriel.iml" filepath="$PROJECT_DIR$/Gabriel/Gabriel.iml" />
       <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSS/JS-Arrays.iml" filepath="$PROJECT_DIR$/CSS/JS-Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaScriptArrays/JavaScriptArrays.iml" filepath="$PROJECT_DIR$/JavaScriptArrays/JavaScriptArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaScriptObjects/JavaScriptObjects.iml" filepath="$PROJECT_DIR$/JavaScriptObjects/JavaScriptObjects.iml" />
     </modules>
   </component>
 </project>
