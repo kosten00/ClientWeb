@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bookman Old Style", serif;
+    color: #404040;
+}
+
+p {
+    text-align: center;
+}
+
+.header {
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.wrapper {
+    background: rgba(63, 161, 202, 0.3);
+    margin: 5em;
+    padding: 2em;
+    border-radius: 15px;
+    min-width: 900px;
+    max-width: 1000px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.output {
+    background-color: #e3e3e3;
+}
+
+.text-field {
+    padding: 15px;
+    height: 66%;
+    width: 100%;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.converter-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner-converter-form-elements {
+    width: 20%;
+}
+
+.convert-button {
+    width: 100%;
+    height: 100%;
+}
