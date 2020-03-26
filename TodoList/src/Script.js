@@ -2,7 +2,7 @@ function ready() {
     let inputField = document.querySelector(".input-text-field");
     let addItemButton = document.querySelector(".add-item");
     let listOfItems = document.querySelector(".list-of-items");
-    
+
     addItemButton.addEventListener("click", function () {
         let textFromTextfield = inputField.value;
         let errorMessage = document.querySelector(".error-message");

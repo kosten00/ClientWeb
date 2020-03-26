@@ -2,6 +2,30 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Berlin Sans FB", sans-serif;
+}
+
+
+button {
+    font-weight: 600;
+    padding: 1em 1em 1em;
+    border-radius: 15px;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #09a746;
+}
+
+button:active {
+    background: rgb(25, 147, 91);
+    box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+
 .todo-list {
     background-color: #ffd526;
     overflow: auto;
@@ -35,6 +59,8 @@ html {
 }
 
 .input-text-field {
+    border-radius: 10px;
+    padding: 5px;
     margin: 10px;
     width: 540px;
     height: 30px;
@@ -51,6 +77,8 @@ html {
 
 .items-in-list {
     border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 3px;
     margin: 1px;
     display: grid;
     grid-template-columns: 5fr 1fr 1fr;
@@ -62,4 +90,5 @@ html {
 
 .edit-field {
     height: 46px;
+    border-radius: 15px;
 }
