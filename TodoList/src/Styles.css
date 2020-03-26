@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+}
+
+.todo-list {
+    background-color: #ffd526;
+    overflow: auto;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffb428;
+}
+
+.content-wrapper {
+    background-color: #fff067;
+}
+
+.error-message-wrapper {
+    background-color: #fffdd9;
+}
+
+.error-message {
+    text-align: center;
+    color: #fffdd9;
+}
+
+.button-holder {
+    text-align: center;
+}
+
+.text-field-wrapper {
+    text-align: center;
+}
+
+.input-text-field {
+    margin: 10px;
+    width: 540px;
+    height: 30px;
+}
+
+.list-wrapper {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.list-of-items {
+    display: inline;
+}
+
+.items-in-list {
+    border: 1px solid #000000;
+    margin: 1px;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+
+.list-item-text {
+    overflow-x: auto;
+}
+
+.edit-field {
+    height: 46px;
+}
