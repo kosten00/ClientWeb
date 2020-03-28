@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Berlin Sans FB", sans-serif;
+}
+
+button {
+    font-weight: 600;
+    padding: 1em 1em 1em;
+    border-radius: 15px;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #09a746;
+}
+
+button:active {
+    background: rgb(25, 147, 91);
+    box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+.todo-list {
+    background-color: #ffd526;
+    overflow: auto;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffb428;
+}
+
+.content-wrapper {
+    background-color: #fff067;
+}
+
+.error-message-wrapper {
+    background-color: #fffdd9;
+}
+
+.error-message {
+    text-align: center;
+    color: #fffdd9;
+}
+
+.button-holder {
+    text-align: center;
+}
+
+.text-field-wrapper {
+    text-align: center;
+}
+
+.input-text-field {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    width: 540px;
+    height: 30px;
+}
+
+.list-wrapper {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.list-of-items {
+    display: inline;
+}
+
+.list-item {
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 3px;
+    margin: 1px;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+
+.list-item-text {
+    overflow-x: auto;
+}
+
+.edit-field {
+    height: 46px;
+    border-radius: 15px;
+}
