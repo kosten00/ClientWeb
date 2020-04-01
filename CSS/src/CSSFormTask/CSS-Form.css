@@ -25,7 +25,7 @@ body {
 }
 
 .form-field {
-    padding: 18px 0 0 0;
+    padding: 17px 0 0 0;
 }
 
 .form-field-label {
@@ -34,12 +34,16 @@ body {
 }
 
 .text-filed {
-    font-size: 14px;
     box-sizing: border-box;
     width: 100%;
     border: none;
     margin: 5px 0 0 0;
-    padding: 8px;
+    padding: 8px 8px 8px 12px;
+}
+
+.one-line-input {
+    height: 34px;
+
 }
 
 .text-filed[placeholder] {
@@ -47,7 +51,7 @@ body {
 }
 
 input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: lightgrey;
+    color: #9FA5AE;
 }
 
 .form-instruction {
@@ -71,7 +75,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 }
 
 .form-submit-button:hover {
-    background-color: dodgerblue;
+    background-color: #1E90FF;
     cursor: pointer;
 }
 
