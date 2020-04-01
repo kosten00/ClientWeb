@@ -8,25 +8,26 @@ body {
     font-size: 19px;
 }
 
-.table-for-task {
+.employee-table {
     margin: 10px;
     border: 1px solid #CCCCCC;
     border-collapse: collapse;
-    width: 760px;
+    width: 100%;
+    max-width: 760px;
 }
 
-.table-for-task thead {
+.employee-table thead {
     background: #3498DB;
-    color: white;
+    color: #FFFFFF;
 }
 
-.table-for-task th, td {
+.employee-table th, .employee-table td{
     border: 1px solid #CCCCCC;
     text-align: left;
     padding: 12px;
     font-weight: normal;
 }
 
-.table-for-task tbody tr:nth-child(odd) {
+.employee-table tbody tr:nth-child(odd) {
     background: #EDEDED;
 }
