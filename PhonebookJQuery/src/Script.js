@@ -175,7 +175,6 @@ jQuery(function () {
         changeFilterFieldPointerEvents();
     }
 
-    //не работает с селект олл
     function changeFilterFieldPointerEvents() {
         if (getListLength() >= 2) {
             $('.filter').css('pointer-events', 'auto');
