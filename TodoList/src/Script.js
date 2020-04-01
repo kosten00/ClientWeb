@@ -1,30 +1,30 @@
 function ready() {
-    let inputField = document.querySelector(".input-text-field");
-    let addItemButton = document.querySelector(".add-item");
-    let listOfItems = document.querySelector(".list-of-items");
+    var inputField = document.querySelector(".input-text-field");
+    var addItemButton = document.querySelector(".add-item");
+    var listOfItems = document.querySelector(".list-of-items");
 
     addItemButton.addEventListener("click", function () {
-        let textFromTextfield = inputField.value;
-        let errorMessage = document.querySelector(".error-message");
+        var textFromTextfield = inputField.value;
+        var errorMessage = document.querySelector(".error-message");
 
         if (textFromTextfield === "") {
             errorMessage.style.color = "#ff2020";
 
             return;
         }
-        let listItem = document.createElement("li");
+        var listItem = document.createElement("li");
         listItem.className = "items-in-list";
 
-        let stringItem = document.createElement("p");
+        var stringItem = document.createElement("p");
         stringItem.className = "list-item-text";
         stringItem.textContent = textFromTextfield;
         listItem.appendChild(stringItem);
 
-        let editButton = document.createElement("button");
+        var editButton = document.createElement("button");
         editButton.textContent = "edit";
         listItem.appendChild(editButton);
 
-        let deleteButton = document.createElement("button");
+        var deleteButton = document.createElement("button");
         deleteButton.textContent = "delete";
         listItem.appendChild(deleteButton);
 
@@ -38,23 +38,23 @@ function ready() {
         });
 
         editButton.addEventListener("click", function () {
-            let editField = document.createElement('input');
+            var editField = document.createElement('input');
             editField.type = 'text';
             editField.className = "edit-field";
 
             stringItem.replaceWith(editField);
             editField.value = textFromTextfield;
 
-            let saveButton = document.createElement("button");
+            var saveButton = document.createElement("button");
             saveButton.textContent = "save";
             editButton.replaceWith(saveButton);
 
-            let cancelButton = document.createElement("button");
+            var cancelButton = document.createElement("button");
             cancelButton.textContent = "cancel";
             deleteButton.replaceWith(cancelButton);
 
             saveButton.addEventListener("click", function () {
-                let newStringValue = editField.value;
+                var newStringValue = editField.value;
 
                 if (newStringValue === "") {
                     errorMessage.style.color = "#ff2020";
