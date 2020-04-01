@@ -6,7 +6,6 @@ body {
     font-family: "Berlin Sans FB", sans-serif;
 }
 
-
 button {
     font-weight: 600;
     padding: 1em 1em 1em;
@@ -24,7 +23,6 @@ button:active {
     background: rgb(25, 147, 91);
     box-shadow: 0 3px rgb(33, 147, 90) inset;
 }
-
 
 .todo-list {
     background-color: #ffd526;
