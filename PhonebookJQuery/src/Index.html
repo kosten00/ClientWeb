@@ -6,22 +6,14 @@
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <link rel="stylesheet" href="libs/jquery-ui-1.12.1/jquery-ui.css">
-    <script src="libs/jquery-3.4.1.js"></script>
-    <script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
-    <script src="Script.js"></script>
 </head>
 <body>
-
 <div class="container">
     <div class="header-container">
-
         <h1 class="header">Phone book</h1>
-
         <div class="informer" id="incorrectInputInformer">Please input surname, name, phone number and press + button
         </div>
-
         <form class="add-item-form">
-
             <label class="input-form-element">Surname
                 <input class="input-form-element" id="surnameInput" type="text">
             </label>
@@ -32,27 +24,21 @@
                 <input class="input-form-element" id="phoneInput" type="number">
             </label>
             <a href="#" class="add-button form-buttons input-form-element" id="addNewItemButton" type="submit">+</a>
-
         </form>
-
         <div class="filter">
-
             <input type="checkbox" class="select-all-checkbox" id="selectAllCheckbox"/>
             <label>Filter
                 <input class="input-filter input-form-element" id="filterField" type="text">
             </label>
             <a href="#" class="form-buttons filter-button input-form-element" id="applyFilterButton">apply</a>
             <a href="#" class="form-buttons filter-button input-form-element" id="cancelFilterButton">cancel</a>
-
         </div>
-
     </div>
-
     <ul class="list" id="list">
-
     </ul>
-
 </div>
-
 </body>
+<script src="libs/jquery-3.4.1.js"></script>
+<script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="Script.js"></script>
 </html>
