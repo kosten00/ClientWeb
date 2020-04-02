@@ -1,4 +1,4 @@
-function ready() {
+(function ready() {
     var inputField = document.querySelector(".input-text-field");
     var addItemButton = document.querySelector(".add-item");
     var listOfItems = document.querySelector(".list-of-items");
@@ -76,6 +76,4 @@ function ready() {
             });
         })
     });
-}
-
-document.addEventListener("DOMContentLoaded", ready);
+})();
