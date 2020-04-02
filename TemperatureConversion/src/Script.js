@@ -1,14 +1,29 @@
-function ready() {
-    let inputField = document.querySelector(".text-field");
-    let convertButton = document.querySelector(".convert-button");
-    let outputFieldFahrenheit = document.querySelector(".fahrenheit-p");
-    let outputFieldKelvin = document.querySelector(".kelvin-p");
+(function ready() {
+    var inputField = document.querySelector(".text-field");
+    var convertButton = document.querySelector(".convert-button");
+    var outputFieldFahrenheit = document.querySelector(".fahrenheit-p");
+    var outputFieldKelvin = document.querySelector(".kelvin-p");
+
+    function convertToFahrenheit(value) {
+        return (value * (9 / 5)) + 32;
+    }
+
+    function convertToKelvin(value) {
+        return 273.15 + value;
+    }
 
     convertButton.addEventListener("click", function () {
-        let value = Number(inputField.value);
-        outputFieldFahrenheit.textContent = (value * (9 / 5)) + 32;
-        outputFieldKelvin.textContent = 273.15 + value;
-    });
-}
+        var inputFieldValue = inputField.value;
 
-document.addEventListener("DOMContentLoaded", ready);
+        if (inputFieldValue === '') {
+            alert('Please input value to the input field!');
+
+            return;
+        }
+
+        var value = Number(inputFieldValue);
+
+        outputFieldFahrenheit.textContent = convertToFahrenheit(value).toFixed(2);
+        outputFieldKelvin.textContent = convertToKelvin(value).toFixed(2);
+    });
+})();
