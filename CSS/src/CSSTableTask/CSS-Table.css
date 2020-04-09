@@ -6,6 +6,7 @@ body {
     font-family: Tahoma, sans-serif;
     color: #676565;
     font-size: 19px;
+    overflow: hidden;
 }
 
 .employee-table {
@@ -21,7 +22,7 @@ body {
     color: #FFFFFF;
 }
 
-.employee-table th, .employee-table td{
+.employee-table th, .employee-table td {
     border: 1px solid #CCCCCC;
     text-align: left;
     padding: 12px;
