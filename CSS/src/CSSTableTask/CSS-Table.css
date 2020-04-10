@@ -6,14 +6,16 @@ body {
     font-family: Tahoma, sans-serif;
     color: #676565;
     font-size: 19px;
-    overflow: hidden;
+}
+
+.container {
+    width: 100%;
 }
 
 .employee-table {
     margin: 10px;
     border: 1px solid #CCCCCC;
     border-collapse: collapse;
-    width: 100%;
     max-width: 760px;
 }
 
