@@ -9,14 +9,14 @@ body {
 }
 
 .container {
-    width: 100%;
+    margin: 10px;
+    max-width: 760px;
 }
 
 .employee-table {
-    margin: 10px;
     border: 1px solid #CCCCCC;
     border-collapse: collapse;
-    max-width: 760px;
+    width: 100%;
 }
 
 .employee-table thead {
@@ -29,6 +29,7 @@ body {
     text-align: left;
     padding: 12px;
     font-weight: normal;
+    width: available;
 }
 
 .employee-table tbody tr:nth-child(odd) {
