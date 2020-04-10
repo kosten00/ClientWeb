@@ -1,4 +1,4 @@
-(function ready() {
+(function () {
     var countries = [{
         name: 'Russia',
         cities: [{
@@ -39,13 +39,13 @@
 
     // Найдите страну/страны с максимальным количеством городов
     function getMaxCitiesCountCountries(countries) {
-        return countries
-            .filter(function (country) {
-                return country.cities.length === countries
-                    .reduce(function (sum, value) {
-                        return Math.max(value.cities.length, sum);
-                    }, 0);
-            });
+        var maxCitiesCount = countries.reduce(function (maxCitiesCount, currentCountryCitiesCount) {
+            return Math.max(currentCountryCitiesCount.cities.length, maxCitiesCount);
+        }, 0);
+
+        return countries.filter(function (country) {
+            return country.cities.length === maxCitiesCount;
+        });
     }
 
     console.log(getMaxCitiesCountCountries(countries));
@@ -55,10 +55,9 @@
         var countriesInfo = {};
 
         countries.forEach(function (country) {
-            countriesInfo[country.name] = country.cities
-                .reduce(function (countryPopulation, city) {
-                    return countryPopulation + city.population;
-                }, 0);
+            countriesInfo[country.name] = country.cities.reduce(function (countryPopulation, city) {
+                return countryPopulation + city.population;
+            }, 0);
         });
 
         return countriesInfo;
