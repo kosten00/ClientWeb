@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TodoListVueJS App</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="AppStyles.css">
+</head>
+<body>
+<div v-cloak id="app">
+    <div class="container ">
+        <h1 class="mt-2 text-center">TODO List</h1>
+        <hr>
+        <div class="row mt-2">
+            <input v-model="todoText" type="text" class="form-control col-4 offset-1" placeholder="Task description">
+            <button @click="isCorrectInput(todoText) ? add() : todoText = ''" type="button"
+                    class="btn btn-primary col-3 offset-3">Add new todo.
+            </button>
+        </div>
+        <hr>
+        <div :class="isIncorrectInput ? 'alert-danger' : 'alert-primary'"
+             class="alert mb-0 mt-2 ml-4 mr-4" role="alert">
+            {{ isIncorrectInput ? 'Input field is empty!' : 'Please, input your todo' }}
+        </div>
+        <ul class="list-style">
+            <li v-for="todo in todos" :key="todo.id" class="row mt-1 mr-1">
+                <div v-text="todo.id + ' ' + todo.text" class="col-5  text-truncate "></div>
+                <button @click="isEditing = true, setCurrent(todo)" v-b-modal.modal
+                        class="btn btn-primary col-2 offset-2 mr-1"
+                        type="button">
+                    <b-icon icon="pencil" class="rounded-circle bg-primary"></b-icon>
+                </button>
+                <button @click="isRemoving = true, setCurrent(todo)" v-b-modal.modal
+                        class="btn btn-danger col-2"
+                        type="button">
+                    <b-icon icon="trash" class="rounded-circle bg-danger"></b-icon>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <template>
+        <div>
+            <b-modal id="modal"
+                     @ok="isEditing ? closeModal() : remove()"
+                     @cancel="closeModal()"
+                     @close="closeModal()"
+                     :ok-disabled="editFieldText.trim() === '' && isEditing"
+                     :ok-title="isEditing ? 'Accept' : 'Remove'"
+                     :cancel-title="isEditing ? 'Cancel' : 'Keep'"
+                     :title="isEditing ? 'Edit todo:' : 'Remove todo:'"
+                     :ok-variant="isRemoving ? 'danger' : ''">
+                <input v-if="isEditing"
+                       v-model="editFieldText"
+                       type="text" class="form-control"
+                       placeholder="Task description"
+                       required>
+                <div v-if="isEditing"
+                     :class="editFieldText.trim() === '' ? 'alert-danger' : 'alert-primary'"
+                     class="alert mb-0 mt-2 ml-4 mr-4" role="alert">
+                    {{ editFieldText.trim() === '' ? 'Input field is empty!' : 'Please, input your todo' }}
+                </div>
+                <p v-if="isRemoving">Do you want to remove this todo: "{{ currentTodo.text }}" ?</p>
+            </b-modal>
+        </div>
+    </template>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/bootstrap-vue/dist/bootstrap-vue.min.js"></script>
+<script src="./node_modules/bootstrap-vue/dist/bootstrap-vue-icons.min.js"></script>
+<script src="AppScript.js"></script>
+</body>
+</html>

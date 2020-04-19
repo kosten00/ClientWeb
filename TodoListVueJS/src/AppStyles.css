@@ -1,0 +1,11 @@
+* {
+    background: #ffffff;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.modal-active {
+    display: block;
+}
