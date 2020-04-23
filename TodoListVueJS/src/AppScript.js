@@ -56,7 +56,7 @@ new Vue({
                 var that = this;
 
                 setTimeout(function () {
-                    that.incorrectInput = false;
+                    that.isIncorrectInput = false;
                 }, 2000);
 
                 return false;
