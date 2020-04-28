@@ -12,7 +12,7 @@ html, body {
 
 body {
     color: #000000;
-    font-family: "Bookman Old Style", Courier, serif;
+    font-family: "Bookman Old Style", serif;
 }
 
 .header-container {
@@ -21,7 +21,7 @@ body {
     top: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 750px;
+    width: 700px;
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -38,24 +38,30 @@ body {
 }
 
 .filter {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr;
+    pointer-events: none;
     padding-bottom: 10px;
 }
 
 .input-filter {
-    width: 100%;
+    width: 450px;
     margin-left: 0;
+}
+
+.select-all-checkbox {
+    height: 18px;
+    width: 18px;
+    margin-top: 35px;
+    margin-left: 15px;
 }
 
 .input-form-element {
     margin: 5px;
     flex-basis: 20%;
+    height: 30px;
     text-align: center;
 }
 
 .form-buttons {
-    margin: auto;
     text-decoration: none;
     font-weight: bolder;
     color: #dddddd;
@@ -81,9 +87,10 @@ body {
 }
 
 .list-item-checkbox {
-    margin: auto;
-    height: 1.3em;
-    width: 1.3em;
+    height: 18px;
+    width: 18px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 .list-item {
