@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScriptArrays/JavaScriptArrays.iml" filepath="$PROJECT_DIR$/JavaScriptArrays/JavaScriptArrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScriptObjects/JavaScriptObjects.iml" filepath="$PROJECT_DIR$/JavaScriptObjects/JavaScriptObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhoneBookWebpack/PhoneBookWebpack.iml" filepath="$PROJECT_DIR$/PhoneBookWebpack/PhoneBookWebpack.iml" />
       <module fileurl="file://$PROJECT_DIR$/PhonebookJQuery/PhonebookJQuery.iml" filepath="$PROJECT_DIR$/PhonebookJQuery/PhonebookJQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/TemperatureConversion/TemperatureConversion.iml" filepath="$PROJECT_DIR$/TemperatureConversion/TemperatureConversion.iml" />
       <module fileurl="file://$PROJECT_DIR$/TodoList/TodoList.iml" filepath="$PROJECT_DIR$/TodoList/TodoList.iml" />
