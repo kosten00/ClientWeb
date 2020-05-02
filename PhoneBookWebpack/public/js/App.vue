@@ -26,7 +26,7 @@
                     <div class="form-row">
                         <button @click.prevent="add" class="btn form-group btn-primary offset-md-1 col-md-5">Add
                         </button>
-                        <button @click="clearInputs"
+                        <button @click.prevent="clearInputs"
                                 class="btn form-group btn-secondary offset-md-1 col-md-5"
                                 :disabled="hasNoFilledFields">Clear
                         </button>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="form-row ">
-                <input v-model="term" type="text" class="form-control form-group col-md-8">
+                <input v-model="term" type="text" class="form-control form-group col-md-8" :disabled="hasEmptyContacts">
                 <button @click.prevent="getContacts" class="btn form-group btn-primary offset-md-1 col-md-3"
                         :disabled="isEmptyTerm || hasEmptyContacts">{{ searchButtonText }}
                 </button>
@@ -51,7 +51,8 @@
                 <th class="w-20">Last</th>
                 <th class="w-25">Phone</th>
                 <th class="w-15">
-                    <button @click="openConfirmationModal()" :disabled="hasNoCheckedContacts" class="btn p-0 btn-danger"
+                    <button @click.prevent="openConfirmationModal()" :disabled="hasNoCheckedContacts"
+                            class="btn p-0 btn-danger"
                             type="button">
                         Remove selected
                     </button>
@@ -69,7 +70,7 @@
                 <td class="text-truncate">{{ contact.lastName }}</td>
                 <td class="text-truncate">{{ contact.phone }}</td>
                 <td class="align-content-center">
-                    <button @click="openConfirmationModal(contact)"
+                    <button @click.prevent="openConfirmationModal(contact)"
                             class="btn p-0 btn-danger" type="button">
                         Remove
                     </button>
@@ -161,6 +162,7 @@
                 this.firstName = '';
                 this.lastName = '';
                 this.phone = '';
+                this.term = '';
             },
             hasEmptyFields() {
                 if (this.firstName.trim() === '') {

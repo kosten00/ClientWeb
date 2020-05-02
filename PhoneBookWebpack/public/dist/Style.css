@@ -13012,15 +13012,7 @@ input[type="color"].form-control:disabled {
   font-size: 125%;
   vertical-align: text-bottom;
 }
-* {
-  background: #ffffff;
-}
-[v-cloak] {
-  display: none;
-}
-.fixed-layout-table {
-  table-layout: fixed;
-}
+*{background:#fff}[v-cloak]{display:none}.fixed-layout-table{table-layout:fixed}
 
 
 /*# sourceMappingURL=Style.css.map*/
