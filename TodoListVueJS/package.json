@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "AppScript.js",
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.11.0",
-    "jquery": "^3.4.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {},
