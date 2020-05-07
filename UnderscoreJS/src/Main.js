@@ -46,19 +46,19 @@ var avgAge = _.reduce(list, function (memo, item) {
 
 console.log(avgAge);
 
-var listOfAges = _.sortBy(_.compact(_.map(list, function (item) {
-    if (item.age >= 20 && item.age <= 30) {
-        return item;
-    }
-})), function (item) {
-    return item.age;
-});
+var listOfAges = _.chain(list)
+    .filter(function (item) {
+        return item.age >= 20 && item.age <= 30;
+    })
+    .compact()
+    .sortBy('age')
+    .value();
 
 console.log(listOfAges);
 
-var listWithFullNames = _.map(list, function (item) {
-    item.FullName = item.name + ' ' + item.lastName;
+var listWithFullNames = _.each(list, function (item) {
+    item.fullName = item.name + ' ' + item.lastName;
     return item;
 });
 
-console.log(listWithFullNames)
+console.log(listWithFullNames);
