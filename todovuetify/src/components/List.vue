@@ -21,7 +21,7 @@
       <v-dialog v-model="dialog" persistent max-width="290">
         <v-card>
           <v-card-title class="headline">Remove item?</v-card-title>
-          <v-card-text>Do you want te remove todo: {{ currentTodo.todoText }}</v-card-text>
+          <v-card-text>Do you want te remove todo: "{{ currentTodo.todoText }}" ?</v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="yellow darken-4" text @click="cancel">Cancel</v-btn>
@@ -45,8 +45,8 @@
     }),
     methods: {
       remove() {
-        this.$store.commit('remove', this.currentTodo.id);
         this.dialog = false;
+        this.$store.commit('remove', this.currentTodo.id);
       },
       tryToSave(todo) {
         if (!this.hasNoText) {
@@ -55,7 +55,7 @@
       },
       tryToRemove(todo) {
         this.dialog = true;
-        this.setCurrent(todo)
+        this.setCurrent(todo);
       },
       save(todo) {
         todo.todoText = this.currentTodo.todoText;
@@ -69,8 +69,8 @@
         };
       },
       cancel() {
-        this.dialog = false
-        this.currentTodo = {};
+        this.dialog = false;
+        this.setCurrent({todoText: '', id: null});
       }
     },
     computed: {
