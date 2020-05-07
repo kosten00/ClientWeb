@@ -16,27 +16,25 @@
         <div class="row mt-2">
             <input v-model="todoText" type="text" class="form-control col-4 offset-1" placeholder="Task description">
             <button @click="isCorrectInput(todoText) ? add() : todoText = ''" type="button"
-                    class="btn btn-primary col-3 offset-3">Add new todo.
+                    class="btn btn-primary col-3 offset-3">Add new todo
             </button>
         </div>
         <hr>
         <div :class="isIncorrectInput ? 'alert-danger' : 'alert-primary'"
-             class="alert mb-0 mt-2 ml-4 mr-4" role="alert">
+             class="alert mb-2 mt-2 ml-4 mr-4" role="alert">
             {{ isIncorrectInput ? 'Input field is empty!' : 'Please, input your todo' }}
         </div>
         <ul class="list-style">
             <li v-for="todo in todos" :key="todo.id" class="row mt-1 mr-1">
-                <div v-text="todo.id + ' ' + todo.text" class="col-5  text-truncate "></div>
-                <button @click="isEditing = true, setCurrent(todo)" v-b-modal.modal
-                        class="btn btn-primary col-2 offset-2 mr-1"
-                        type="button">
-                    <b-icon icon="pencil" class="rounded-circle bg-primary"></b-icon>
-                </button>
-                <button @click="isRemoving = true, setCurrent(todo)" v-b-modal.modal
-                        class="btn btn-danger col-2"
-                        type="button">
-                    <b-icon icon="trash" class="rounded-circle bg-danger"></b-icon>
-                </button>
+                <div v-text="todo.id + ' ' + todo.text" class="col-5  text-truncate"></div>
+                <b-button @click="setCurrent(todo, $event)" v-b-modal.modal
+                          variant="primary"
+                          class="col-2 offset-2 mr-1" id="edit">Edit
+                </b-button>
+                <b-button @click="setCurrent(todo, $event)" v-b-modal.modal
+                          variant="danger"
+                          class="col-2" id="remove">Remove
+                </b-button>
             </li>
         </ul>
     </div>
@@ -67,9 +65,9 @@
     </template>
 </div>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../node_modules/vue/dist/vue.js"></script>
 <script src="../node_modules/bootstrap-vue/dist/bootstrap-vue.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../node_modules/bootstrap-vue/dist/bootstrap-vue-icons.min.js"></script>
 <script src="AppScript.js"></script>
 </body>
